@@ -35,12 +35,15 @@ const ENTERTAINMENT_MESSAGES = [
   "🎲 Fun Fact: Teachers make more minute-by-minute decisions than any other profession.",
   "Trivia: The first known worksheet was used in the 19th century.",
   "Tip: You can generate worksheets for multiple chapters at once!",
-  "Project trivia: VeriQraft is powered by Retrieval-Augmented Generation (RAG)!",
+  "Project trivia: DIRO.ai is powered by Retrieval-Augmented Generation (RAG)!",
   "“Education is the most powerful weapon which you can use to change the world.” – Nelson Mandela",
   "🎓 Did you know? There are over 60 million teachers in the world.",
-  "🧠 Fun: The part of your brain that processes reading lights up when you read worksheets!",
+  "🧠 Fun Trivia: The part of your brain that processes reading lights up when you read worksheets!",
   "Trivia: The word 'syllabus' comes from a misreading of a Greek word in old Latin manuscripts.",
   "Keep going! Every great lesson starts with a click.",
+  "Did you Know: The co-developer, Divyabhanu, is a big Club Penguin fan.",
+  "Language Trivia: The word 'school' comes from the Greek word “scholē”, which meant “leisure.” 🤯"
+  "Did you Know: The co-developer, Rohan, has over a million SpiderMan merchandise lying around him right now."
 ];
 
 const App: React.FC = () => {
