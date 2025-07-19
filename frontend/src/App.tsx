@@ -8,6 +8,9 @@ import DownloadButtons from "./components/DownloadButtons";
 import StreamSelector from "./components/StreamSelector";
 import "./App.css";
 
+// Use env variable for backend base URL
+const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:8000";
+
 const STREAMS = [
   "Science",
   "Commerce with Maths",
@@ -73,7 +76,7 @@ const App: React.FC = () => {
 
   // Download handlers
   const handleDownloadPDF = async () => {
-    const res = await fetch("http://localhost:8000/api/export", {
+    const res = await fetch(`${API_BASE_URL}/api/export`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ text: output, filetype: "pdf" }),
@@ -85,12 +88,12 @@ const App: React.FC = () => {
     const { file_path } = await res.json();
 
     window.open(
-      `http://localhost:8000/api/download?file_path=${encodeURIComponent(file_path)}`
+      `${API_BASE_URL}/api/download?file_path=${encodeURIComponent(file_path)}`
     );
   };
 
   const handleDownloadWord = async () => {
-    const res = await fetch("http://localhost:8000/api/export", {
+    const res = await fetch(`${API_BASE_URL}/api/export`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ text: output, filetype: "docx" }),
@@ -102,7 +105,7 @@ const App: React.FC = () => {
     const { file_path } = await res.json();
 
     window.open(
-      `http://localhost:8000/api/download?file_path=${encodeURIComponent(file_path)}`
+      `${API_BASE_URL}/api/download?file_path=${encodeURIComponent(file_path)}`
     );
   };
 
@@ -138,7 +141,7 @@ const App: React.FC = () => {
 
     // Use EventSource for SSE from FastAPI
     const eventSource = new window.EventSource(
-      `http://localhost:8000/api/generate_stream?${params.toString()}`
+      `${API_BASE_URL}/api/generate_stream?${params.toString()}`
     );
 
     eventSource.onmessage = (event) => {
