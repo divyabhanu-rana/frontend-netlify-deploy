@@ -42,8 +42,8 @@ const ENTERTAINMENT_MESSAGES = [
   "Trivia: The word 'syllabus' comes from a misreading of a Greek word in old Latin manuscripts.",
   "Keep going! Every great lesson starts with a click.",
   "Did you Know: The co-developer, Divyabhanu, is a big Club Penguin fan.",
-  "Language Trivia: The word 'school' comes from the Greek word “scholē”, which meant “leisure.” 🤯"
-  "Did you Know: The co-developer, Rohan, has over a million SpiderMan merchandise lying around him right now."
+  "Language Trivia: The word 'school' comes from the Greek word “scholē”, which meant “leisure.” 🤯",
+  "Did you Know: The co-developer, Rohan, has over a million SpiderMan merchandise lying around him right now.",
 ];
 
 const App: React.FC = () => {
