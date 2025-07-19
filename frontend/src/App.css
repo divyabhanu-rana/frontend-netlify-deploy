@@ -1,0 +1,305 @@
+/* Here we can add styles for our App component */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+  margin: 0;
+  background: #f7f9fb;
+  font-family: 'Inter', sans-serif;
+  color: #222;
+}
+
+/* ========== THEME SUPPORT ========== */
+body.light {
+  background: #f7f9fb;
+  color: #222;
+}
+body.dark {
+  background: #181a20;
+  color: #e2e6ed;
+}
+
+.app-main-bg.light-theme {
+  background: linear-gradient(180deg, #f5f8fd 0 70%, #fff 100%);
+}
+.app-main-bg.dark-theme {
+  background: linear-gradient(180deg, #232935 0 70%, #181a20 100%);
+}
+
+.generator-container.light-theme {
+  background: #fff;
+  color: #222;
+}
+.generator-container.dark-theme {
+  background: #232935;
+  color: #e2e6ed;
+  box-shadow: 0 6px 36px 0 rgba(0,0,0,0.25), 0 1.5px 4px 0 rgba(0,0,0,0.09);
+}
+
+.generator-title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 1.4rem;
+  color: #293e6a;
+  letter-spacing: -1px;
+  text-align: center;
+  white-space: nowrap;
+}
+.generator-container.dark-theme .generator-title {
+  color: #ffd566;
+}
+
+/* Theme toggle button */
+.theme-toggle-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.45em;
+  z-index: 2;
+  color: #f9b41b;
+  transition: color 0.18s;
+}
+.theme-toggle-btn:hover,
+.theme-toggle-btn:focus {
+  color: #ffd566;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.1rem;
+}
+
+.input-row {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.input-row label {
+  font-weight: 500;
+  color: #1a2a47;
+  font-size: 1.02rem;
+  margin-right: 12px;
+}
+.generator-container.dark-theme .input-row label {
+  color: #ffd566;
+}
+
+.input-form input,
+.input-form select {
+  background: #f5f8fd;
+  border: 1px solid #dde2ed;
+  border-radius: 8px;
+  padding: 0.7em 1em;
+  font-size: 1.06rem;
+  color: #293e6a;
+  outline: none;
+  transition: border 0.15s;
+}
+.generator-container.dark-theme .input-form input,
+.generator-container.dark-theme .input-form select {
+  background: #232935;
+  border: 1px solid #353545;
+  color: #ffd566;
+}
+.input-form input:focus,
+.input-form select:focus {
+  border-color: #0b57d0;
+}
+.generator-container.dark-theme .input-form input:focus,
+.generator-container.dark-theme .input-form select:focus {
+  border-color: #f9b41b;
+}
+
+.generate-btn {
+  background: #f9b41b;
+  color: #232323;
+  font-weight: 700;
+  border: none;
+  border-radius: 16px;
+  padding: 0.9em 2em;
+  font-size: 1.13rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  cursor: pointer;
+  margin-top: 0.6em;
+  transition: background 0.2s;
+}
+.generate-btn:disabled {
+  background: #ffe9b0;
+  color: #aaa;
+  cursor: not-allowed;
+}
+.generator-container.dark-theme .generate-btn {
+  background: #ffd566;
+  color: #232935;
+}
+.generator-container.dark-theme .generate-btn:disabled {
+  background: #353545;
+  color: #6c6c6c;
+}
+
+/* Output section */
+.output-section {
+  margin-top: 2.1rem;
+  width: 100%;
+  background: #f7f9fb;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0,70,160,0.07);
+  padding: 1.2rem 1.4rem;
+}
+.generator-container.dark-theme .output-section {
+  background: #232935;
+  color: #ffd566;
+  box-shadow: 0 2px 10px rgba(255, 213, 102, 0.09);
+}
+
+/* --- Download Buttons Section --- */
+.download-btns-row {
+  display: flex;
+  gap: 2em;
+  justify-content: flex-end;
+  margin-top: 2.1em;
+}
+
+.download-btn {
+  background: #f9b41b;
+  color: #242424;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  padding: 0.7em 1.6em;
+  font-size: 1.05rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  cursor: pointer;
+  transition: background 0.18s, box-shadow 0.18s;
+  outline: none;
+  margin-right: 0.5em;
+}
+.download-btn:hover,
+.download-btn:focus {
+  background: #ffd566;
+  box-shadow: 0 4px 18px rgba(0, 87, 208, 0.13);
+}
+.generator-container.dark-theme .download-btn {
+  background: #353545;
+  color: #ffd566;
+}
+.generator-container.dark-theme .download-btn:hover,
+.generator-container.dark-theme .download-btn:focus {
+  background: #f9b41b;
+  color: #232935;
+  box-shadow: 0 4px 18px rgba(255, 213, 102, 0.13);
+}
+
+@media (max-width: 700px) {
+  .generator-container {
+    box-shadow: none;
+    border-radius: 0;
+    padding: 1.5rem 0.6rem;
+    margin: 18px 0 0 0;
+  }
+  .input-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.4rem;
+  }
+  .download-btns-row {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.7em;
+  }
+}
+
+/* Spinner for generate button */
+.generate-spinner {
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  border: 2.5px solid #ffe9b0;
+  border-top: 2.5px solid #f9b41b;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  vertical-align: middle;
+  margin-right: 0.7em;
+}
+.generator-container.dark-theme .generate-spinner {
+  border: 2.5px solid #353545;
+  border-top: 2.5px solid #ffd566;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* --- Progress Bar Styles --- */
+.generate-slider-container {
+  width: 100%;
+  margin: 1.2em 0 0.7em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.generate-slider-bar {
+  width: 70%;
+  height: 10px;
+  background: #ffe9b0;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 0.5em;
+}
+.generate-slider-bar.dark-theme {
+  background: #353545;
+}
+
+.generate-slider-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #f9b41b 0%, #ffd566 100%);
+  border-radius: 6px;
+  transition: width 0.45s cubic-bezier(.4,0,.2,1);
+}
+.generate-slider-fill.dark-theme {
+  background: linear-gradient(90deg, #ffd566 0%, #a88614 100%);
+}
+
+.generate-slider-filler-text {
+  margin-top: 0;
+  font-size: 1.08rem;
+  font-weight: 500;
+  color: #c08d0d;
+  letter-spacing: 0.01em;
+  text-align: center;
+  min-height: 1.7em;
+}
+.generate-slider-filler-text.dark-theme {
+  color: #ffd566;
+}
+
+/* --- ENTERTAINMENT/QUOTE/TRIVIA SLIDER BELOW PROGRESS FILLER --- */
+.generate-slider-entertainment-text {
+  margin-top: 0.5em;
+  color: #00758F;
+  font-style: italic;
+  font-size: 0.98em;
+  animation: fadeIn 0.7s;
+  text-align: center;
+  padding: 0.25em 0.5em;
+  background: rgba(220, 245, 255, 0.4);
+  border-radius: 8px;
+  min-height: 1.7em;
+  transition: background 0.3s;
+}
+.generate-slider-entertainment-text.dark-theme {
+  color: #4ccfff;
+  background: rgba(40, 60, 90, 0.4);
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(8px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
